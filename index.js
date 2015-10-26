@@ -42,7 +42,9 @@ function WebTorrent (opts) {
   self.destroyed = false
   self.torrentPort = opts.torrentPort || 0
   self.tracker = opts.tracker !== undefined ? opts.tracker : true
-
+  self.userAgent = opts.userAgent
+  self.trackerKey = opts.trackerKey
+  
   self._rtcConfig = opts.rtcConfig
   self._wrtc = opts.wrtc || global.WRTC // to support `webtorrent-hybrid` package
 
